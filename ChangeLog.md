@@ -1,11 +1,9 @@
-Change Log
-==========
+# Change Log
 
 All relevant changes to the project are documented in this file.
 
 
-[v1.2][] - 2018-09-23
----------------------
+## [v1.2][] - 2018-09-23
 
 ### Changes
 - Converted to GNU configure & build system
@@ -23,8 +21,7 @@ All relevant changes to the project are documented in this file.
 - Add Fedora installation instructions
 
 
-[v1.1.2][] - 2018-06-20
------------------------
+## [v1.1.2][] - 2018-06-20
 
 Panic release to fix save/restore.
 
@@ -38,8 +35,7 @@ Panic release to fix save/restore.
 - Issue #27: Use the install command instead of raw cp/mv/chmod.
 
 
-[v1.1][] - 2017-11-23
----------------------
+## [v1.1][] - 2017-11-23
 
 Various fixes and improvements.  Credits to Abdullah ibn Nadjo
 
@@ -72,8 +68,7 @@ Various fixes and improvements.  Credits to Abdullah ibn Nadjo
   - Get rid of globals for dir iteration
 
 
-[v1.0][] - 2016-05-10
----------------------
+## [v1.0][] - 2016-05-10
 
 First major release.  Light has been around for a while now and seems to
 make some people happy.  Also someone wanted a new release, so here you
@@ -88,8 +83,7 @@ go!
 - Issue #10: Honor `$DESTDIR` on man page installation
 
 
-[v0.9][] - 2014-06-08
----------------------
+## [v0.9][] - 2014-06-08
 
 ### Changes
 - Complete rewrite of program (Every single byte)
@@ -102,8 +96,7 @@ go!
 - Probably missed some stuff
 
 
-v0.7 - 2012-11-18
------------------
+## v0.7 - 2012-11-18
 
 ### Changes
 - Ported bash script to C
