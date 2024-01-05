@@ -1,9 +1,9 @@
-AC_INIT([light], [1.2], [https://github.com/kurth4cker/light])
+AC_INIT([light], [1.3.0], [https://github.com/kurth4cker/light])
 AM_INIT_AUTOMAKE([1.11 foreign subdir-objects])
 AM_SILENT_RULES([yes])
 
 AC_CONFIG_SRCDIR([src/light.c])
-AC_CONFIG_HEADER([config.h])
+AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([Makefile src/Makefile])
 
 AC_PROG_CC
