@@ -1,4 +1,4 @@
-AC_INIT([light], [1.2], [https://github.com/haikarainen/light/issues])
+AC_INIT([light], [1.2], [https://github.com/kurth4cker/light])
 AM_INIT_AUTOMAKE([1.11 foreign subdir-objects])
 AM_SILENT_RULES([yes])
 
