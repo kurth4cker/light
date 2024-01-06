@@ -1,11 +1,11 @@
 #include "src/light.h"
 #include "src/helpers.h"
 
-//#include <stdio.h>
-
-#define LIGHT_RETURNVAL_INITFAIL  2
-#define LIGHT_RETURNVAL_EXECFAIL  1
-#define LIGHT_RETURNVAL_SUCCESS   0
+enum {
+	LIGHT_RETURNVAL_SUCCESS = 0,
+	LIGHT_RETURNVAL_EXECFAIL,
+	LIGHT_RETURNVAL_INITFAIL,
+};
 
 int main(int argc, char **argv)
 {
