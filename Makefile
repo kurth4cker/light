@@ -45,12 +45,12 @@ $(BIN): $(OBJ)
 	$(CC) $(LDFLAGS) -o $@ $(OBJ)
 
 clean:
-	rm -f $(BIN) $(OBJ)
+	rm -f $(BIN) $(OBJ) light-$(VERSION).tar.gz
 
 dist: $(DISTFILES) clean
 	mkdir light-$(VERSION)
 	cp -Rf $(DISTFILES) light-$(VERSION)
-	tar -cf light-$(VERSION).tar light-$(VERSION)
+	tar -c light-$(VERSION) | gzip -c > light-$(VERSION).tar.gz
 	rm -r light-$(VERSION)
 
 install: $(BIN) $(MAN1) $(DOCS)
