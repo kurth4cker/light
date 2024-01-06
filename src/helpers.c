@@ -146,4 +146,3 @@ int light_mkpath(char *dir, mode_t mode)
     
     return mkdir(dir, mode);
 }
-

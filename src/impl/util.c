@@ -1,4 +1,3 @@
-
 #include "src/impl/util.h"
 #include "src/light.h"
 #include "src/helpers.h"
@@ -45,5 +44,3 @@ bool impl_util_dryrun_command(light_device_target_t *target, char const *command
     LIGHT_NOTE("impl_util_dryrun_command: running custom command on utility target %s: \"%s\"", target->name, command_string);
     return true;
 }
-
-

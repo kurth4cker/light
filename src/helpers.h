@@ -1,4 +1,3 @@
-
 #pragma once
 
 #include <stdbool.h>
@@ -53,4 +52,3 @@ uint64_t light_log_clamp_max(uint64_t max);
 double light_percent_clamp(double percent);
 
 int light_mkpath(char *dir, mode_t mode);
-

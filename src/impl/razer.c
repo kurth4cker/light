@@ -1,4 +1,3 @@
-
 #include "src/impl/razer.h"
 #include "src/light.h"
 #include "src/helpers.h"
@@ -117,5 +116,3 @@ bool impl_razer_command(light_device_target_t *target, char const *command_strin
     // To implement support, simply parse the command string to your liking, and return false on invalid input or results!
     return true;
 }
-
-

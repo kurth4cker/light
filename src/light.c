@@ -1,4 +1,3 @@
-
 #include "src/light.h"
 #include "src/helpers.h"
 
