@@ -1,6 +1,6 @@
 
-#include "light.h"
-#include "helpers.h"
+#include "src/light.h"
+#include "src/helpers.h"
 
 //#include <stdio.h>
 

@@ -1,7 +1,7 @@
 
 #pragma once 
 
-#include "light.h"
+#include "src/light.h"
 
 // Implementation of the sysfs enumerator
 // Enumerates devices for backlights and leds

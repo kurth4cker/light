@@ -1,7 +1,7 @@
 
-#include "impl/sysfs.h"
-#include "light.h"
-#include "helpers.h"
+#include "src/impl/sysfs.h"
+#include "src/light.h"
+#include "src/helpers.h"
 
 #include <stdio.h> //snprintf
 #include <stdlib.h> // malloc, free

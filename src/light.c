@@ -1,11 +1,11 @@
 
-#include "light.h"
-#include "helpers.h"
+#include "src/light.h"
+#include "src/helpers.h"
 
 // The different device implementations
-#include "impl/sysfs.h"
-#include "impl/util.h"
-#include "impl/razer.h"
+#include "src/impl/sysfs.h"
+#include "src/impl/util.h"
+#include "src/impl/razer.h"
 
 #include <stdlib.h> // malloc, free
 #include <string.h> // strstr
