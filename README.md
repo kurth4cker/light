@@ -13,13 +13,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE*
 - [Introduction](#introduction)
 - [Examples](#examples)
 - [Usage](#usage)
-  - [Command options](#command-options)
-  - [Extra options](#extra-options)
 - [Installation](#installation)
-  - [Arch Linux](#arch-linux)
-  - [Fedora](#fedora)
-  - [Debian/Ubuntu](#debian)
-  - [NixOS/nix](#nix)
   - [Manual](#manual)
   - [Permissions](#permissions)
 
@@ -72,98 +66,9 @@ used, but this varies between different systems:
 
 ## Usage
 
-Usage follows the following pattern, where options are optional and the
-neccesity of value depends on the options used
-    
-    light [options] <value>
-
-### Command options
-
-You may only specify one command flag at a time. These flags decide what the
-program will ultimately end up doing.
-
-*  `-H` Show help and exit
-*  `-V` Show program version and exit
-*  `-L` List available devices
-*  `-A` Increase brightness by value (value needed!)
-*  `-U` Decrease brightness by value (value needed!)
-*  `-S` Set brightness to value (value needed!)
-*  `-G` Get brightness
-*  `-N` Set minimum brightness to value (value needed!)
-*  `-P` Get minimum brightness
-*  `-O` Save the current brightness
-*  `-I` Restore the previously saved brightness
-
-Without any extra options, the command will operate on the device called
-`sysfs/backlight/auto`, which works as it's own device however it proxies the
-backlight device that has the highest controller resolution
-(read: highest precision). Values are interpreted and printed as percentage
-between 0.0 - 100.0.
-
-**Note:** If something goes wrong, you can find out by maxing out the verbosity
-flag by passing `-v 3` to the options. This will activate the logging of
-warnings, errors and notices. Light will never print these by default, as it is
-designed to primarily interface with other applications and not humanbeings
-directly.
-
-### Extra options
-
-These can be mixed, combined and matched after convenience. 
-
-* `-r` Raw mode, values (printed and interpreted from commandline) will be
-  treated as integers in the controllers native range, instead of in percent.
-* `-v <verbosity>` Specifies the verbosity level. 0 is default and prints
-  nothing. 1 prints only errors, 2 prints only errors and warnings, and 3
-  prints both errors, warnings and notices.
-* `-s <devicepath>` Specifies which device to work on. List available devices
-  with the -L command. Full path is needed.
-
+See manpage: light(1)
 
 ## Installation
-
-### Arch Linux
-
-The latest stable release is available in official repos, install with:
-
-    pacman -S light
-
-Make sure you add yourself to the video group as well to get proper usage
-permissions:
-
-    usermod -aG video <user>
-
-Additionally, the latest development branch (master) is available on
-AUR: [light-git][]
-
-### Fedora
-
-Fedora already has light packaged in main repos, so just run:
-
-    dnf install light
-
-and you're good to go.
-
-### <a name="debian"></a>Debian/Ubuntu
-
-Pre-built .deb files, for the latest Ubuntu release, can be downloaded
-from the [GitHub](https://github.com/haikarainen/light/releases/) releases
-page.  If you want to build your own there is native support available in the
-GIT sources.  Clone and follow the development branch guidelines below followed
-by:
-
-    make deb
-
-**Note:** you must be in the `video` group. Add yourself to it by running
-`sudo usermod -a -G video $USER`.
-
-### <a name="nix"></a>NixOS/nix
-
-You can add the following line to your `configuration.nix`:
-
-    programs.light.enable = true;
-
-For more detail on Backlight control in NixOS and setting system keybindings,
-visit the [NixOS Wiki page](https://nixos.wiki/wiki/Backlight)
 
 ### Manual
 
