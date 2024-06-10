@@ -1,24 +1,8 @@
-VERSION = 1.3.1_git
-
-CC = cc
-
-PREFIX = /usr/local
-MANDIR = $(PREFIX)/share/man
-BINDIR = $(PREFIX)/bin
-DOCDIR = $(PREFIX)/share/doc/light
+.POSIX:
+include config.mk
 
 MAN1 = light.1
 DOCS = README.md
-
-DISTFILES = \
-	COPYING \
-	Contributing.md \
-	Makefile \
-	config.h \
-	src \
-	contrib \
-	$(MAN1) \
-	$(DOCS)
 
 BIN = light
 OBJ = src/main.o \
@@ -42,16 +26,10 @@ LIGHT_CFLAGS = \
 all: $(BIN)
 
 $(BIN): $(OBJ)
-	$(CC) $(LDFLAGS) -o $@ $(OBJ)
+	$(CC) $(LDFLAGS) -o $@ $(OBJ) $(LDLIBS)
 
 clean:
-	rm -f $(BIN) $(OBJ) light-$(VERSION).tar.gz
-
-dist: $(DISTFILES) clean
-	mkdir light-$(VERSION)
-	cp -Rf $(DISTFILES) light-$(VERSION)
-	tar -c light-$(VERSION) | gzip -c > light-$(VERSION).tar.gz
-	rm -r light-$(VERSION)
+	rm -f $(BIN) *.o src/*.o src/impl/*.o
 
 install: $(BIN) $(MAN1) $(DOCS)
 	mkdir -p $(DESTDIR)$(BINDIR) \
