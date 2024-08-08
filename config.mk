@@ -10,3 +10,12 @@ LDLIBS =
 CC = cc
 
 VERSION = 1.3.1_git
+
+LIGHT_CFLAGS = \
+	-DVERSION=\"$(VERSION)\" \
+	-D_GNU_SOURCE \
+	-std=gnu99 \
+	-Wno-type-limits \
+	-Wno-format-truncation \
+	-Wno-unused-parameter \
+	$(CFLAGS)

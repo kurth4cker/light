@@ -12,17 +12,6 @@ OBJ = src/main.o \
 	src/impl/util.o \
 	src/impl/razer.o
 
-LIGHT_CFLAGS = \
-	-DVERSION=\"$(VERSION)\" \
-	-D_GNU_SOURCE \
-	-std=gnu99 \
-	-Wno-type-limits \
-	-Wno-format-truncation \
-	-Wno-unused-parameter \
-	-fcommon \
-	$(CFLAGS)
-
-
 all: $(BIN)
 
 $(BIN): $(OBJ)
