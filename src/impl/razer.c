@@ -1,6 +1,6 @@
-#include "src/impl/razer.h"
-#include "src/light.h"
-#include "src/helpers.h"
+#include "impl/razer.h"
+#include "light.h"
+#include "helpers.h"
 
 #include <stdio.h> //snprintf
 #include <stdlib.h> // malloc, free

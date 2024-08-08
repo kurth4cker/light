@@ -1,5 +1,5 @@
-#include "src/light.h"
-#include "src/helpers.h"
+#include "light.h"
+#include "helpers.h"
 
 enum {
 	LIGHT_RETURNVAL_SUCCESS = 0,

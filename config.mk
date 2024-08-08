@@ -12,6 +12,7 @@ CC = cc
 VERSION = 1.3.1_git
 
 LIGHT_CFLAGS = \
+	-Iinclude \
 	-DVERSION=\"$(VERSION)\" \
 	-D_GNU_SOURCE \
 	-std=gnu99 \

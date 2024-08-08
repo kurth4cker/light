@@ -1,6 +1,6 @@
 #pragma once 
 
-#include "src/light.h"
+#include "light.h"
 
 // Implementation of the razer enumerator
 // Enumerates devices for the openrazer driver https://github.com/openrazer/openrazer

@@ -1,6 +1,6 @@
 #pragma once 
 
-#include "src/light.h"
+#include "light.h"
 
 // Implementation of the util enumerator
 // Enumerates devices for utilities and testing

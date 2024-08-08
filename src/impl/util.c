@@ -1,6 +1,6 @@
-#include "src/impl/util.h"
-#include "src/light.h"
-#include "src/helpers.h"
+#include "impl/util.h"
+#include "light.h"
+#include "helpers.h"
 
 #include <stdio.h> //snprintf
 #include <stdlib.h> // malloc, free
