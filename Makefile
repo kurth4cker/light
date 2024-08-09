@@ -14,6 +14,14 @@ OBJ = src/main.o \
 
 all: $(BIN)
 
+src/helpers.o: include/helpers.h
+src/light.o: include/light.h config.h include/helpers.h include/impl/sysfs.h \
+	include/impl/util.h include/impl/razer.h
+src/main.o: include/light.h config.h include/helpers.h
+src/impl/razer.o: include/impl/razer.h include/light.h config.h include/helpers.h
+src/impl/sysfs.o: include/impl/sysfs.h include/light.h config.h include/helpers.h
+src/impl/util.o: include/impl/util.h include/light.h config.h include/helpers.h
+
 $(BIN): $(OBJ)
 	$(CC) $(LDFLAGS) -o $@ $(OBJ) $(LDLIBS)
 
