@@ -10,14 +10,14 @@
 #define LIGHT_YEAR   "2012 - 2018"
 #define LIGHT_AUTHOR "Fredrik Haikarainen"
 
-struct _light_device_target_t;
-typedef struct _light_device_target_t light_device_target_t;
+struct light_device_target;
+typedef struct light_device_target light_device_target_t;
 
-struct _light_device_t;
-typedef struct _light_device_t light_device_t;
+struct light_device;
+typedef struct light_device light_device_t;
 
-struct _light_device_enumerator_t;
-typedef struct _light_device_enumerator_t light_device_enumerator_t;
+struct light_device_enumerator;
+typedef struct light_device_enumerator light_device_enumerator_t;
 
 /* Function pointers that implementations have to set for device targets */
 typedef bool (*LFUNCVALSET)(light_device_target_t*, uint64_t);
@@ -26,7 +26,7 @@ typedef bool (*LFUNCMAXVALGET)(light_device_target_t*, uint64_t*);
 typedef bool (*LFUNCCUSTOMCMD)(light_device_target_t*, char const *);
 
 /* Describes a target within a device (for example a led on a keyboard, or a controller for a backlight) */
-struct _light_device_target_t
+struct light_device_target
 {
     char           name[256];
     LFUNCVALSET    set_value;
@@ -38,7 +38,7 @@ struct _light_device_target_t
 };
 
 /* Describes a device (a backlight, a keyboard, a led-strip) */
-struct _light_device_t
+struct light_device
 {
     char                  name[256];
     light_device_target_t **targets;
@@ -52,7 +52,7 @@ typedef bool (*LFUNCENUMINIT)(light_device_enumerator_t*);
 typedef bool (*LFUNCENUMFREE)(light_device_enumerator_t*);
 
 /* An enumerator that is responsible for creating and freeing devices as well as their targets */
-struct _light_device_enumerator_t
+struct light_device_enumerator
 {
     char            name[256];
     LFUNCENUMINIT   init;
@@ -62,12 +62,12 @@ struct _light_device_enumerator_t
     uint64_t        num_devices;
 };
 
-typedef struct _light_context_t light_context_t;
+typedef struct light_context light_context_t;
 
 // A command that can be run (set, get, add, subtract, print help, print version, list devices etc.)
 typedef bool (*LFUNCCOMMAND)(light_context_t *);
 
-struct _light_context_t
+struct light_context
 {
     struct 
     {
@@ -133,8 +133,8 @@ light_device_target_t *light_create_device_target(light_device_t *device, char c
 /* Use this to delete a device target. */
 void light_delete_device_target(light_device_target_t *device_target);
 
-typedef struct _light_target_path_t light_target_path_t;
-struct _light_target_path_t 
+typedef struct light_target_path light_target_path_t;
+struct light_target_path
 {
     char enumerator[NAME_MAX];
     char device[NAME_MAX];

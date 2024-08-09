@@ -6,13 +6,13 @@
 // Enumerates devices for the openrazer driver https://github.com/openrazer/openrazer
 
 // Device target data 
-struct _impl_razer_data_t
+struct impl_razer_data
 {
     char brightness[NAME_MAX];
     uint64_t max_brightness;
 };
 
-typedef struct _impl_razer_data_t impl_razer_data_t;
+typedef struct impl_razer_data impl_razer_data_t;
 
 bool impl_razer_init(light_device_enumerator_t *enumerator);
 bool impl_razer_free(light_device_enumerator_t *enumerator);
