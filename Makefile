@@ -1,7 +1,7 @@
 .POSIX:
 include config.mk
 
-MAN1 = light.1
+MAN1 = docs/light.1
 DOCS = README.md
 
 BIN = light
