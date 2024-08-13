@@ -10,15 +10,13 @@ like to see a consistent styling throughout the project, as well as in
 third-party enumerator implementations. The actual source code may not be
 fully "up to code" yet, but it's getting there.
 
-We use 4 spaces for indentation. We have an empty line at the top and bottom
-of each file.
+We use 4 spaces for indentation.
 
 The following two sources should be clear enough examples of our coding style:
 
 ### Header files 
 
 ```c
-    
     #pragma once
     
     #include <stdbool.h>
@@ -37,18 +35,13 @@ The following two sources should be clear enough examples of our coding style:
     /* Describe what the purpose of this function is, what it does with/to
      * foo_struct, and what it returns. */
     bool do_some_stuff(some_struct_t *foo_struct);
-    
 ```
 
 ### Source files
 
-The second line of each source file should be the include to the corresponding
-header file, followed by an empty line.
-
 Internal/static functions are always prefixed with an underscore (_).
 
 ```c
-
 #include "some_struct.h"
 
 static void _increment_one(uint64_t *out_value)
@@ -74,7 +67,6 @@ bool do_some_stuff(some_struct_t *foo_struct)
     
     return true;
 }
-
 ```
 
 ## Implementing an enumerator 
@@ -96,7 +88,6 @@ bare minimum declare 6 functions. If you need to store your own data for each
 device or device-target, you will need to declare structs for these as well.
 
 ```c
-
 #pragma once 
 
 #include "light.h"
@@ -119,7 +110,6 @@ bool impl_foo_set(light_device_target_t *target, uint64_t in_value);
 bool impl_foo_get(light_device_target_t *target, uint64_t *out_value);
 bool impl_foo_getmax(light_device_target_t *target, uint64_t *out_value);
 bool impl_foo_command(light_device_target_t *target, char const *command_string);
-
 ```
 
 ### Step 3
@@ -138,7 +128,6 @@ data that you allocate yourself. You may use `impl_foo_free` to free resources
 you allocate outside of the light API.
 
 ```c
-
 #include "impl/foo.h"
 
 #include "light.h"
@@ -179,7 +168,6 @@ bool impl_foo_free(light_device_enumerator_t *enumerator)
 /* Implement the other functions to do their thing. Get, Set and GetMax should
  * be self-explanatory. Command is reserved for future use, but basically will
  * allow the user to run custom commands on a target. */
-
 ```
 
 ### Step 4
