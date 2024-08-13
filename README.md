@@ -1,11 +1,5 @@
 # Light - A program to control backlights (and other hardware lights) in GNU/Linux
 
-*Copyright (C) 2012 - 2018*
-
-*Author: Fredrik Haikarainen*
-
-*Contributor & Maintainer: Joachim Nilsson*
-
 *This is free software, see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE*
 
@@ -20,7 +14,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE*
 
 ## Introduction
 
-[Light][] is a program to control backlights and other lights under GNU/Linux:
+Light is a program to control backlights and other lights under GNU/Linux:
 
 * Works where other software has proven unreliable (xbacklight etc.)
 * Works even in a fully CLI-environment, i.e. it does not rely on X
@@ -70,39 +64,19 @@ See manpage: light(1)
 
 ## Installation
 
-### Manual
+**light** requires only C toolchain and POSIX compatible make for building and
+installation:
 
-If you download a stable release, these are the commands that will get you up
-and running:
-
-    tar xf light-x.yy.tar.gz
-    cd light-x.yy/
-    ./configure && make
-    sudo make install
-
-However the latest development branch requires some extras. Clone the
-repository and run the `autogen.sh` script.  This requires that `automake` and
-`autoconf` is installed on your system.
-
-    ./autogen.sh
-    ./configure && make
-    sudo make install
-
-The `configure` script and `Makefile.in` files are not part of GIT because they
-are generated at release time with `make release`.
-
+    # edit config.mk
+    make
+    # as root if necessary
+    make install
 
 ### Permissions
 
 Optionally, instead of the classic SUID root mode of operation, udev rules can
-be set up to manage the kernel sysfs permissions.  Use the configure script to
-enable this mode of operation:
-
-    ./configure --with-udev && make
-    sudo make install
-
-This installs the `90-backlight.rules` into `/usr/lib/udev/rules.d/`.
-If your udev rules are located elsewhere, use `--with-udev=PATH`.
+be set up to manage the kernel sysfs permissions. Install
+`contrib/90-backlight.rules` to `/usr/lib/udev/rules.d`.
 
 **Note:** make sure that your user is part of the `video` group, otherwise you
 will not get access to the devices.
@@ -111,6 +85,5 @@ will not get access to the devices.
 directory (for cached settings) is not used, instead the per-user
 specific `~/.config/light` is used.
 
-
-[Light]:     https://github.com/haikarainen/light/
-[light-git]: https://aur.archlinux.org/packages/light-git
+## Copying
+Licensed under GPL-3.0-or-later.  See file COPYING for details.
