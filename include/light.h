@@ -5,11 +5,6 @@
 #include <limits.h> // NAME_MAX
 #include <stddef.h> // NULL
 
-#include "config.h"
-
-#define LIGHT_YEAR   "2012 - 2018"
-#define LIGHT_AUTHOR "Fredrik Haikarainen"
-
 struct light_device_target;
 typedef struct light_device_target light_device_target_t;
 

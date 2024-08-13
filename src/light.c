@@ -183,36 +183,7 @@ static void _light_print_usage()
     printf("Usage:\n"
         "  light [OPTIONS] [VALUE]\n"
         "\n"
-        "Commands:\n"
-        "  -H, -h      Show this help and exit\n"
-        "  -V          Show program version and exit\n"
-        "  -L          List available devices\n"
-        
-        "  -A          Increase brightness by value\n"
-        "  -U          Decrease brightness by value\n" 
-        "  -T          Multiply brightness by value (can be a non-whole number, ignores raw mode)\n"
-        "  -S          Set brightness to value\n"
-        "  -G          Get brightness\n"
-        "  -N          Set minimum brightness to value\n"
-        "  -P          Get minimum brightness\n"
-        "  -O          Save the current brightness\n"
-        "  -I          Restore the previously saved brightness\n"
-
-
-        "\n"
-        "Options:\n"
-        "  -r          Interpret input and output values in raw mode (ignored for -T)\n"
-        "  -s          Specify device target path to use, use -L to list available\n"
-        "  -v          Specify the verbosity level (default 0)\n"
-        "                 0: Values only\n"
-        "                 1: Values, Errors.\n"
-        "                 2: Values, Errors, Warnings.\n"
-        "                 3: Values, Errors, Warnings, Notices.\n"
-        "\n");
-
-    printf("Copyright (C) %s  %s\n", LIGHT_YEAR, LIGHT_AUTHOR);
-    printf("This is free software, see the source for copying conditions.  There is NO\n"
-        "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE\n"
+        "See light(1) manpage for details\n"
         "\n");
 }
 
