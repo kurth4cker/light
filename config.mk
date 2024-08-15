@@ -18,5 +18,4 @@ LIGHT_CFLAGS = \
 	-std=gnu99 \
 	-Wno-type-limits \
 	-Wno-format-truncation \
-	-Wno-unused-parameter \
 	$(CFLAGS)

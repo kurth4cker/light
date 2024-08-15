@@ -649,13 +649,13 @@ light_device_target_t* light_find_device_target(light_context_t *ctx, char const
     return target;
 }
 
-bool light_cmd_print_help(light_context_t *ctx)
+bool light_cmd_print_help()
 {
     _light_print_usage();
     return true;
 }
 
-bool light_cmd_print_version(light_context_t *ctx)
+bool light_cmd_print_version()
 {
     printf("v%s\n", VERSION);
     return true;

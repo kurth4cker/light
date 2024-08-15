@@ -120,6 +120,7 @@ bool impl_sysfs_init(light_device_enumerator_t *enumerator)
 
 bool impl_sysfs_free(light_device_enumerator_t *enumerator)
 {
+    (void)enumerator;
     return true;
 }
 
@@ -166,5 +167,7 @@ bool impl_sysfs_command(light_device_target_t *target, char const *command_strin
 {
     // No current need for custom commands in sysfs enumerator
     // To implement support, simply parse the command string to your liking, and return false on invalid input or results!
+    (void)target;
+    (void)command_string;
     return true;
 }

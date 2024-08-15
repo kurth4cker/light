@@ -84,8 +84,8 @@ struct light_context
 };
 
 // The different available commands
-bool light_cmd_print_help(light_context_t *ctx); // H,h 
-bool light_cmd_print_version(light_context_t *ctx); // V
+bool light_cmd_print_help(); // H,h 
+bool light_cmd_print_version(); // V
 bool light_cmd_list_devices(light_context_t *ctx); // L
 bool light_cmd_set_brightness(light_context_t *ctx); // S
 bool light_cmd_get_brightness(light_context_t *ctx); // G

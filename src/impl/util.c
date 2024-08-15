@@ -16,6 +16,7 @@ bool impl_util_init(light_device_enumerator_t *enumerator)
 
 bool impl_util_free(light_device_enumerator_t *enumerator)
 {
+    (void)enumerator;
     return true;
 }
 
