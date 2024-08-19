@@ -1,3 +1,8 @@
+# ARCHIVAL NOTE
+This was a fork of originally deleted repository. Now it is archived. See
+[brightnessctl][] for a usable alternative.
+
+Below is original readme.
 # Light - A program to control backlights (and other hardware lights) in GNU/Linux
 
 *This is free software, see the source for copying conditions.  There is NO
@@ -87,3 +92,5 @@ specific `~/.config/light` is used.
 
 ## Copying
 Licensed under GPL-3.0-or-later.  See file COPYING for details.
+
+[brightnessctl]: https://github.com/Hummer12007/brightnessctl
